@@ -50,24 +50,22 @@
 <script src="~/js/fileinput.min.js"></script>
  
  
-    <div class="file-loading">
+<h1>Example with local preview</h1>
+<div class="file-loading">
         <input id="file-kv-pdf" name="file-kv-pdf[]" type="file" multiple>
     </div>
-    <script>
+<script>
     $('#file-kv-pdf').fileinput({
         uploadUrl: "/file-upload-batch/1",
         pdfRendererUrl: '/pdfviewer/viewer.html',
+        usePdfRenderer: true, // the docs say this should only be true for iOS/android/IE11 (and there is a function that evaluates to that), however from my experimentation on safari on iOS I don't quite think it is working that way. Hard-coding to true here to verify it works - see https://plugins.krajee.com/file-input/plugin-options#usePdfRenderer
         overwriteInitial: false,
         initialPreviewAsData: true,
         initialPreview: [
-            'https://plugins.krajee.com/samples/sample-2.pdf'
+            '/sample.pdf'
         ],
         initialPreviewConfig: [
             {type: 'pdf', description: "<h5>PDF File One</h5> This is a representative placeholder description number one for this PDF file.", size: 3072}
         ]
     });
     </script>
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
