@@ -2,6 +2,8 @@
 
 https://plugins.krajee.com/file-preview-management-demo
 
+Local viewer hosting files taken from here: https://github.com/patarapolw/pdf.js-viewer
+
 Here is where the PDF preview using viewer.html is specified https://plugins.krajee.com/file-preview-management-demo#preview-pdf
 
     <div class="file-loading">
